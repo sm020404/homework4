@@ -8,6 +8,11 @@
 </head>
 <body>
 
+  <div id="spinner">
+    <div class="loader"></div>
+  </div>
+
+
   <header>
     My Portfolio
   </header>
@@ -129,5 +134,12 @@
     </div>
   </footer>
 
+  <script>
+    window.addEventListener("load", function() {
+    setTimeout(function() {
+      document.getElementById("spinner").style.display = "none";
+    }, 2000);
+  });
+  </script>
 </body>
 </html>
