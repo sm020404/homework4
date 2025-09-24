@@ -1,0 +1,140 @@
+/* ===== Reset & Base Styles ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* ===== Header & Navigation ===== */
+header {
+  background: #e75480; /* pink */
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  background: #ffe4ec; /* light pink */
+  padding: 1rem;
+}
+
+nav a {
+  margin: 0.3rem 0;
+  text-decoration: none;
+  color: #e75480; /* pink */
+  font-weight: bold;
+}
+
+nav a.resume-btn {
+  background: #e75480; /* pink */
+  color: white;
+  padding: 0.5rem;
+  border-radius: 5px;
+  text-align: center;
+  transition: background-color 0.3s, border-radius 0.3s, box-shadow 0.3s;
+}
+
+nav a.resume-btn:hover {
+  background: #ff7ca4; /* lighter pink */
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* ===== Main Layout ===== */
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+/* ===== Skills Section ===== */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.skill {
+  background: #ffe4ec; /* light pink */
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: transform 0.4s ease, background-color 0.3s ease, border-radius 0.3s;
+}
+
+.skill:hover {
+  transform: scale(1.1) rotate(3deg);
+  background-color: #ffb6c1; /* hot pink shade */
+  border-radius: 12px;
+}
+
+/* ===== Projects Section ===== */
+.projects {
+  display: flex;
+  gap: 1rem;
+}
+
+.project {
+  flex: 1;
+  background: #fff0f5; /* lavender blush */
+  padding: 1rem;
+  border: 1px solid #f8c4d8;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.project:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+/* ===== Footer ===== */
+footer {
+  background: #e75480;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 1024px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+  nav {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects {
+    flex-direction: column;
+  }
+  .skills {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+  nav {
+    flex-direction: column;
+  }
+  .skill {
+    flex: 1 1 100%;
+    text-align: center;
+  }
+}
